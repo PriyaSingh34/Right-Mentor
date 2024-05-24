@@ -133,10 +133,10 @@ function App() {
             </ul>
           </div>
           <div className="hidden lg:flex gap-7">
-            <div className=" text-[#646464] border-[1px] w-28 h-12 rounded-lg flex justify-center items-center text-lg font-bold border-gradient-to-r from-cyan-500 to-blue-500">
+            <div className="text-[#69BC56] border-[1px] border-[#69BC56] w-28 h-12 rounded-2xl flex justify-center items-center text-lg font-bold border-gradient-to-r from-cyan-500 to-blue-500">
               <p>login</p>
             </div>
-            <div className=" text-[#646464] w-48 h-12 flex justify-center items-center text-lg font-bold border-[1px] rounded-lg  bg-border-gradient-to-r from-cyan-500 to-blue-500">
+            <div className=" text-white bg-custom-gradient  w-48 h-12 flex justify-center items-center text-lg font-bold border-[1px] rounded-2xl  bg-border-gradient-to-r from-cyan-500 to-blue-500">
               <p>Become a Mentor</p>
             </div>
           </div>
@@ -161,7 +161,7 @@ function App() {
               <div className="text-lg font-bold pt-2 pb-2 pl-4 pr-4 rounded-lg bg-[#F0FFED] text-[#646464]">
                 Our Vision
               </div>
-              <div className="text-lg text-white font-bold pt-2 pb-2 pl-4 pr-4 rounded-lg bg-[#69BC56]">
+              <div className=" bg-custom-gradient text-lg text-white font-bold pt-2 pb-2 pl-4 pr-4 rounded-2xl ">
                 Careers
               </div>
             </div>
@@ -271,7 +271,7 @@ function App() {
             );
           })}
 
-          <div className="w-[343px] md:w-[430px] h-[245px] md:h-[301px] bg-[#69BC56] rounded-3xl md:rounded-[25px] mt-10 p-10 ">
+          <div className="bg-custom-gradient w-[343px] md:w-[430px] h-[245px] md:h-[301px] rounded-3xl md:rounded-[25px] mt-10 p-10 ">
             <div className="w-full h-full flex flex-col justify-between ">
               <div className="w-full h-auto">
                 <h1 className=" hidden md:block md:text-4xl text-white font-medium mt-2">
@@ -308,7 +308,7 @@ function App() {
             })}
           </Swiper>
 
-          <div className="w-[343px] md:w-[430px] h-[245px] md:h-[301px] bg-[#69BC56] rounded-3xl md:rounded-2xl  md:mt-10 p-10 ">
+          <div className="bg-custom-gradient w-[343px] md:w-[430px] h-[245px] md:h-[301px] rounded-3xl md:rounded-2xl  md:mt-10 p-10 ">
             <div className="w-full h-full flex flex-col justify-between ">
               <div className="w-full h-auto">
                 <h1 className=" md:text-4xl text-white font-medium">
@@ -498,7 +498,7 @@ function App() {
       </section>
 
       <section className=".bg-custom-gradient w-full h-auto flex justify-center items-center bg-slate-100 pt-20 pb-20 p-5 ">
-        <div className="md:w-[1030px] md:h-[426px] m-auto w-[343px] h-[417px]  rounded-3xl bg-lime-500 text-white flex justify-center items-center">
+        <div className="bg-custom-gradient md:w-[1030px] md:h-[426px] m-auto w-[343px] h-[417px]  rounded-3xl  text-white flex justify-center items-center">
           <div className="md:w-[507px] md:h-[306px] w-[330px] h-[400px] flex flex-col justify-center items-center ">
             <div className="md:w-[507px] md:h-[128px] w-[281px] h-[126px] ">
               <p className="font-medium text-center md:text-6xl text-5xl leading-[42px]">
@@ -512,7 +512,7 @@ function App() {
               </p>
             </div>
             <div className="md:w-[191px] w-[155px] h-[60px] rounded-[20px] bg-white  flex justify-center mt-10 ">
-              <button className="font-bold text-lg leading-[20px] text-lime-700">
+              <button className="font-bold text-lg leading-[20px] text-[#69BC56]">
                 Apply Now
               </button>
             </div>
