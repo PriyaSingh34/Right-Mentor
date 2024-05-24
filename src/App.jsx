@@ -293,7 +293,7 @@ function App() {
         </div>
 
         <div className="max-w-6xl h-auto flex md:hidden justify-center flex-wrap mt-5 md:mt-28 p-3 md:p-10 gap-10">
-          <Swiper spaceBetween={5} slidesPerView={2}>
+          <Swiper spaceBetween={5} slidesPerView={2} pagination={{ clickable: true }}>
             {cardData.map((item, id) => {
               return (
                 <SwiperSlide>
@@ -356,7 +356,7 @@ function App() {
         <div className="relative z-[100] w-full h-auto ">
           <div className="w-full h-[550px] lg:h-[350px] relative">
             <div className="w-full flex flex-col lg:flex-row justify-center absolute lg:top-[-150px]  ">
-              <Swiper spaceBetween={5} slidesPerView={1} centeredSlides={true}>
+              <Swiper spaceBetween={5} slidesPerView={1} centeredSlides={true} pagination={{ clickable: true }}>
                 <SwiperSlide>
                   <div className="w-full flex flex-col lg:flex-row items-center justify-center ">
                     <div className=" w-[248px] h-[248px] lg:w-[295px] lg:h-[295] flex justify-center ">
@@ -374,14 +374,8 @@ function App() {
                             Stay hungry, <br /> stay foolish.
                           </p>
                         </div>
-                        {/* <div className="  mt-4">
-                    <p className="font-normal text-base md:leading-5">
-                      Own Your Actions: <br /> We hold ourselves accountable,
-                      taking full responsibility for our actions and
-                      commitments, fostering a culture of trust and
-                      dependability.
-                    </p>
-                  </div> */}
+                       
+                  
                       </div>
                     </div>
                   </div>
@@ -403,14 +397,7 @@ function App() {
                             Stay hungry, <br /> stay foolish.
                           </p>
                         </div>
-                        {/* <div className="  mt-4">
-                    <p className="font-normal text-base md:leading-5">
-                      Own Your Actions: <br /> We hold ourselves accountable,
-                      taking full responsibility for our actions and
-                      commitments, fostering a culture of trust and
-                      dependability.
-                    </p>
-                  </div> */}
+                        
                       </div>
                     </div>
                   </div>
@@ -432,14 +419,7 @@ function App() {
                             Stay hungry, <br /> stay foolish.
                           </p>
                         </div>
-                        {/* <div className="  mt-4">
-                    <p className="font-normal text-base md:leading-5">
-                      Own Your Actions: <br /> We hold ourselves accountable,
-                      taking full responsibility for our actions and
-                      commitments, fostering a culture of trust and
-                      dependability.
-                    </p>
-                  </div> */}
+                     
                       </div>
                     </div>
                   </div>
