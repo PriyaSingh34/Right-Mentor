@@ -79,19 +79,22 @@ export const data = [
       img1: img2,
       img2: img3,
       heading: "Integrity",
-      info: " Own Your Actions:We hold ourselves accountable taking full responsibility for our actions and commitments, fostering a culture of trust and dependability.",
+      info: `Own Your Actions:
+      We hold ourselves accountable taking full responsibility for our actions and commitments, fostering a culture of trust and dependability.`,
     },
     {
       img1: img2,
       img2: img3,
       heading: "Integrity",
-      info: " Own Your Actions:We hold ourselves accountable taking full responsibility for our actions and commitments, fostering a culture of trust and dependability.",
+      info: `Own Your Actions:
+      We hold ourselves accountable taking full responsibility for our actions and commitments, fostering a culture of trust and dependability.`,
     },
     {
       img1: img2,
       img2: img3,
       heading: "Integrity",
-      info: " Own Your Actions:We hold ourselves accountable taking full responsibility for our actions and commitments, fostering a culture of trust and dependability.",
+      info:` Own Your Actions:
+      We hold ourselves accountable taking full responsibility for our actions and commitments, fostering a culture of trust and dependability.`,
     },
   ];
 

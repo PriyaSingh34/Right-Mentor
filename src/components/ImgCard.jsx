@@ -2,7 +2,7 @@ import React from 'react'
 
 const ImgCard = ({id, img, title, para}) => {
   return (
-    <div key={id} className='w-48 h-[301px] bg-black rounded-2xl mt-10'>
+    <div key={id} className='w-48 h-[301px] bg-black-gray-gradient rounded-2xl mt-10'>
     <div className='relative w-full h-[60%] flex flex-col justify-center items-center'>
          <div className='absolute top-[-70px] w-44'>
 

@@ -1,13 +1,12 @@
 import "./App.css";
 import logo from "./assets/logo.png";
 import hero from "./assets/hero.png";
-
-import { RxCross2 } from "react-icons/rx";
 import { IoMdMenu } from "react-icons/io";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 
-import {data, cardData, cardData2, InspirationCardData} from "../src/Data"
+//import data for cards
+import { data, cardData, cardData2, InspirationCardData } from "../src/Data";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -52,7 +51,7 @@ function App() {
             </div>
           </div>
           <div className="lg:hidden">
-            {/* <RxCross2 size={40} /> */}
+          
             <IoMdMenu className="text-[#69BC56]" size={40} />
           </div>
         </div>
@@ -276,7 +275,6 @@ function App() {
                 {InspirationCardData.map((item, id) => (
                   <SwiperSlide>
                     <InspirationCard
-                      key={id}
                       id={id}
                       img1={item.img1}
                       img2={item.img2}
@@ -317,15 +315,10 @@ function App() {
         <div className="w-full h-auto ">
           <div className="w-full h-[550px] lg:h-[350px] relative">
             <div className="w-full flex flex-col lg:flex-row justify-center absolute lg:top-[-150px]  ">
-              <Swiper
-                spaceBetween={5}
-                slidesPerView={1}
-                centeredSlides={true}
-              >
+              <Swiper spaceBetween={5} slidesPerView={1} centeredSlides={true}>
                 {cardData2.map((item, id) => (
                   <SwiperSlide>
                     <Card2
-                      key={id}
                       id={id}
                       img1={item.img1}
                       img2={item.img2}
