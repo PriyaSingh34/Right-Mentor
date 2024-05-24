@@ -1,25 +1,13 @@
 import "./App.css";
 import logo from "./assets/logo.png";
 import hero from "./assets/hero.png";
-import team1 from "./assets/lion.png";
-import team2 from "./assets/CA.png";
-import team3 from "./assets/w.png";
-import team4 from "./assets/IM.png";
-import team5 from "./assets/thor.png";
-import team6 from "./assets/dr.png";
-import people from "./assets/people.png";
+
 import { RxCross2 } from "react-icons/rx";
 import { IoMdMenu } from "react-icons/io";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 
-// import img1 from "./assets/Group 485 (1).png";
-import card1img from "./assets/Group 835.png";
-import card2img from "./assets/Group 837.png";
-import card3img from "./assets/Group 838.png";
-import card4img from "./assets/Group 839.png";
-import img2 from "./assets/01.png";
-import img3 from "./assets/Vector.png";
+import {data, cardData, cardData2, InspirationCardData} from "../src/Data"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -30,90 +18,13 @@ import Cards from "./components/Cards";
 import PhnCard from "./components/PhnCard";
 import ImgCard from "./components/ImgCard";
 import Card2 from "./components/Card2";
-
 import PhnImgCard from "./components/PhnImgCard";
+import InspirationCard from "./components/InspirationCard";
 
 function App() {
   const options = ["Our Story", "Our Mission", "Our Vision", "Careers"];
 
   const defaultOption = options[0];
-  const data = [
-    {
-      img: card2img,
-      heading: `Empowerment
-      Through Innovation`,
-      info: `We believe in empowering our team just as much as we empower our users. Work with cutting-edge technology and have the freedom to explore creative solutions that make real-world impact.`,
-    },
-    {
-      img: card3img,
-      heading: `A Culture of Learning`,
-      info: `Just like our platform, we foster an environment of continuous personal and professional growth. Benefit from mentorships within our own team, access to courses, and regular workshops.`,
-    },
-    {
-      img: card1img,
-      heading: `Diverse and Inclusive`,
-      info: `Just like our platform, we foster an environment of continuous personal and professional growth. Benefit from mentorships within our own team, access to courses, and regular workshops.`,
-    },
-    {
-      img: card4img,
-      heading: `Work-Life Harmony`,
-      info: `We support our team with flexible working hours, remote work options, and an understanding that your life outside of work is just as important as your professional achievements.`,
-    },
-  ];
-
-  const cardData = [
-    {
-      img: team1,
-      title: "Simba",
-      para: "Power of true",
-    },
-    {
-      img: team2,
-      title: "Sreedhar",
-      para: "Design",
-    },
-    {
-      img: team3,
-      title: "Aparna",
-      para: "Engineering",
-    },
-    {
-      img: team4,
-      title: "Sai Krishan",
-      para: "Engineering",
-    },
-    {
-      img: team5,
-      title: "Tarun",
-      para: "intern",
-    },
-    {
-      img: team6,
-      title: "Sai",
-      para: "intern",
-    },
-  ];
-
-  const cardData2 = [
-    {
-      img1: img2,
-      img2: img3,
-      heading: "Integrity",
-      info: " Own Your Actions:We hold ourselves accountable taking full responsibility for our actions and commitments, fostering a culture of trust and dependability.",
-    },
-    {
-      img1: img2,
-      img2: img3,
-      heading: "Integrity",
-      info: " Own Your Actions:We hold ourselves accountable taking full responsibility for our actions and commitments, fostering a culture of trust and dependability.",
-    },
-    {
-      img1: img2,
-      img2: img3,
-      heading: "Integrity",
-      info: " Own Your Actions:We hold ourselves accountable taking full responsibility for our actions and commitments, fostering a culture of trust and dependability.",
-    },
-  ];
 
   return (
     <div className="">
@@ -211,6 +122,7 @@ function App() {
             {data.map((item, id) => (
               <SwiperSlide>
                 <Cards
+                  key={id}
                   id={id}
                   img={item.img}
                   heading={item.heading}
@@ -293,7 +205,11 @@ function App() {
         </div>
 
         <div className="max-w-6xl h-auto flex md:hidden justify-center flex-wrap mt-5 md:mt-28 p-3 md:p-10 gap-10">
-          <Swiper spaceBetween={5} slidesPerView={2} pagination={{ clickable: true }}>
+          <Swiper
+            spaceBetween={5}
+            slidesPerView={2}
+            pagination={{ clickable: true }}
+          >
             {cardData.map((item, id) => {
               return (
                 <SwiperSlide>
@@ -356,74 +272,19 @@ function App() {
         <div className="relative z-[100] w-full h-auto ">
           <div className="w-full h-[550px] lg:h-[350px] relative">
             <div className="w-full flex flex-col lg:flex-row justify-center absolute lg:top-[-150px]  ">
-              <Swiper spaceBetween={5} slidesPerView={1} centeredSlides={true} pagination={{ clickable: true }}>
-                <SwiperSlide>
-                  <div className="w-full flex flex-col lg:flex-row items-center justify-center ">
-                    <div className=" w-[248px] h-[248px] lg:w-[295px] lg:h-[295] flex justify-center ">
-                      <div className="absolute z-[100] top-[40px]">
-                        <div className="w-[248px] lg:w-[295px] ">
-                          <img src={people} className="" alt="" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="bg-slate-800 w-[345px] lg:w-[505px] h-[301px] lg:ml-[25px] text-white lg:mt-[153px] rounded-[35px] p-12">
-                      <div className="">
-                        <div className="mt-5">
-                          <p className="font-medium text-[32px] leading-10">
-                            Stay hungry, <br /> stay foolish.
-                          </p>
-                        </div>
-                       
-                  
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="w-full flex flex-col lg:flex-row items-center justify-center ">
-                    <div className=" w-[248px] h-[248px] lg:w-[295px] lg:h-[295] flex justify-center ">
-                      <div className="absolute z-[100] top-[40px]">
-                        <div className="w-[248px] lg:w-[295px] ">
-                          <img src={people} className="" alt="" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="bg-slate-800 w-[345px] lg:w-[505px] h-[301px] lg:ml-[25px] text-white lg:mt-[153px] rounded-[35px] p-12">
-                      <div className="">
-                        <div className="mt-5">
-                          <p className="font-medium text-[32px] leading-10">
-                            Stay hungry, <br /> stay foolish.
-                          </p>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="w-full flex flex-col lg:flex-row items-center justify-center ">
-                    <div className=" w-[248px] h-[248px] lg:w-[295px] lg:h-[295] flex justify-center ">
-                      <div className="absolute z-[100] top-[40px]">
-                        <div className="w-[248px] lg:w-[295px] ">
-                          <img src={people} className="" alt="" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="bg-slate-800 w-[345px] lg:w-[505px] h-[301px] lg:ml-[25px] text-white lg:mt-[153px] rounded-[35px] p-12">
-                      <div className="">
-                        <div className="mt-5">
-                          <p className="font-medium text-[32px] leading-10">
-                            Stay hungry, <br /> stay foolish.
-                          </p>
-                        </div>
-                     
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
+              <Swiper spaceBetween={5} slidesPerView={1} centeredSlides={true}>
+                {InspirationCardData.map((item, id) => (
+                  <SwiperSlide>
+                    <InspirationCard
+                      key={id}
+                      id={id}
+                      img1={item.img1}
+                      img2={item.img2}
+                      quote={item.quote}
+                      author={item.author}
+                    />
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
           </div>
@@ -456,7 +317,11 @@ function App() {
         <div className="w-full h-auto ">
           <div className="w-full h-[550px] lg:h-[350px] relative">
             <div className="w-full flex flex-col lg:flex-row justify-center absolute lg:top-[-150px]  ">
-              <Swiper spaceBetween={5} slidesPerView={1} centeredSlides={true} pagination={{ clickable: true }}>
+              <Swiper
+                spaceBetween={5}
+                slidesPerView={1}
+                centeredSlides={true}
+              >
                 {cardData2.map((item, id) => (
                   <SwiperSlide>
                     <Card2
@@ -469,8 +334,6 @@ function App() {
                     />
                   </SwiperSlide>
                 ))}
-
-               
               </Swiper>
             </div>
           </div>
