@@ -14,7 +14,7 @@ const Card2 = ({img1,img2,heading,info}) => {
                 </div>
               </div>
             
-              <div className="bg-slate-800 w-[345px] lg:w-[505px] h-[301px] lg:ml-[20px] text-white lg:mt-[153px] rounded-[35px] p-12">
+              <div className="bg-slate-800 w-[345px] lg:w-[505px] h-[301px] lg:ml-[10px] text-white lg:mt-[173px] rounded-[35px] p-12">
                 <div className="">
                   <div className="mt-5">
                     <p className="font-medium text-[32px] leading-10">
