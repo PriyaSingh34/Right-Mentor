@@ -18,7 +18,7 @@ const InspirationCard = ({id, img1, quote, img2, author }) => {
             <p className="font-medium text-[32px] leading-10">{quote}</p>
             </div>
            
-            <div className="flex text-center gap-44">
+            <div className="flex justify-between text-center  ">
               <img className="mt-16" src={img2} alt="" />
               <p className="mt-16 ">{author}</p>
             </div>

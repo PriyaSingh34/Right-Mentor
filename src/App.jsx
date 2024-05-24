@@ -4,6 +4,8 @@ import hero from "./assets/hero.png";
 import { IoMdMenu } from "react-icons/io";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import { RxCross2 } from "react-icons/rx";
+
 
 //import data for cards
 import { data, cardData, cardData2, InspirationCardData } from "../src/Data";
@@ -19,27 +21,33 @@ import ImgCard from "./components/ImgCard";
 import Card2 from "./components/Card2";
 import PhnImgCard from "./components/PhnImgCard";
 import InspirationCard from "./components/InspirationCard";
+import { useState } from "react";
 
 function App() {
   const options = ["Our Story", "Our Mission", "Our Vision", "Careers"];
-
+  const nav = ["Mentors List", "Mentees List", "Students List", "About Us"]
+  const [idx, setIdx] = useState(nav.length - 1)
   const defaultOption = options[0];
+
+  const [isToggled, setIsToggled] = useState(true);
+
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+  };
+
 
   return (
     <div className="">
       <section className="w-full h-auto  ">
-        <div className="max-w-[1400px] w-full m-auto  h-[90px] flex justify-between items-center p-10">
-          <div className="flex gap-10">
+        <div className={`max-w-[1400px] w-full m-auto   flex  justify-between items-center p-10 ${isToggled ? "" : "h-[450px]  lg:h-[90px] flex-col lg:flex-row"}`}>
+          <div className={`flex  justify-center gap-10 ${isToggled ? "" : "flex-col lg:flex-row"}`}>
             <img className="w-48 h-9" src={logo} alt="" />
-            <ul className="hidden lg:flex gap-10">
-              <li className="text-lg font-bold text-[#646464]">Mentors List</li>
-              <li className="text-lg font-bold  text-[#646464]">
-                Mentees List
-              </li>
-              <li className="text-lg font-bold  text-[#646464]">
-                Students List
-              </li>
-              <li className="text-lg font-bold  text-[#646464]">About Us</li>
+            <ul className={` flex-col lg:flex-row justify-center items-center  gap-10 ${isToggled ? "lg:flex hidden" : " flex"}`}>
+              {nav.map((item, id) => {
+                return (
+                  <li key={id} onClick={() => setIdx(id)} className={`text-lg font-bold  ${id === idx ? "text-[#69BC56]" : "text-[#646464]"} `}>{item}</li>
+                )
+              })}
             </ul>
           </div>
           <div className="hidden lg:flex gap-7">
@@ -50,16 +58,18 @@ function App() {
               <p>Become a Mentor</p>
             </div>
           </div>
-          <div className="lg:hidden">
-          
-            <IoMdMenu className="text-[#69BC56]" size={40} />
+          <div onClick={handleToggle} className="lg:hidden">
+
+            {isToggled ? <IoMdMenu className="text-[#69BC56]" size={40} /> : <RxCross2 className="text-[#69BC56]" size={40} />}
+
           </div>
+
         </div>
         <hr className="w-full h-4" />
         <div className="max-w-[1400px] w-full m-auto  h-[50px] flex justify-start items-center pl-10 pb-5">
           <div className="flex gap-10">
             <div className="text-lg font-bold pt-2 pb-2 pl-4 pr-4 rounded-lg  text-[#646464]">
-              About Us
+              {nav[idx]}
             </div>
             <div className="hidden lg:flex gap-10">
               <div className="text-lg font-bold pt-2 pb-2 pl-4 pr-4 rounded-lg bg-[#F0FFED]  text-[#646464]">
@@ -85,7 +95,6 @@ function App() {
           </div>
         </div>
       </section>
-
       <section className="bg-slate-100 w-full h-[80vh] md:h-[100vh] lg:h-[65vh]">
         <div className="w-full h-full flex flex-col  justify-center items-center">
           <div className="w-full h-[25%] md:h-[40%] flex items-end justify-center">
@@ -256,8 +265,8 @@ function App() {
           <div className="relative z-[10] w-full flex justify-center items-center flex-col  gap-3 pt-7">
             <div className="w-[260px] md:w-[539px] md:h-[210px] lg:ml-[22%]">
               <p className="w-[260px] md:w-[312px] md:h-[57px] font-medium text-2xl leading-7 text-[#404040]">
-                Driven by Visionaries:<br/>
-                 The Minds That Motivate Us
+                Driven by Visionaries:<br />
+                The Minds That Motivate Us
               </p>
 
               <p className="font-medium text-lg leading-6 pt-5 text-[#404040]">
