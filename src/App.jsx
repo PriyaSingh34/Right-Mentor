@@ -256,7 +256,8 @@ function App() {
           <div className="relative z-[10] w-full flex justify-center items-center flex-col  gap-3 pt-7">
             <div className="w-[260px] md:w-[539px] md:h-[210px] lg:ml-[22%]">
               <p className="w-[260px] md:w-[312px] md:h-[57px] font-medium text-2xl leading-7 text-[#404040]">
-                Driven by Visionaries: The Minds That Motivate Us
+                Driven by Visionaries:<br/>
+                 The Minds That Motivate Us
               </p>
 
               <p className="font-medium text-lg leading-6 pt-5 text-[#404040]">
